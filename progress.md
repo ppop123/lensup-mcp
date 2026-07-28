@@ -12,3 +12,6 @@
 - Invoked the required Codex review workflow. The installed CLI did not return a
   verdict because of its own plugin authorization/model-cache errors; completed
   a direct diff inspection and retained the deterministic verification record.
+- Created the public repository at
+  `https://github.com/ppop123/lensup-mcp`, configured its LensUp homepage and MCP
+  topics, and pushed `main`.

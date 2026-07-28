@@ -11,7 +11,7 @@ repository for the LensUp remote MCP server without exposing production source.
 - [x] Phase 2: Verify the live MCP endpoint, metadata, catalog, and legal links
 - [x] Phase 3: Add public documentation, metadata, contribution paths, and checks
 - [x] Phase 4: Run local and live verification
-- [ ] Phase 5: Create the public GitHub repository and push `main`
+- [x] Phase 5: Create the public GitHub repository and push `main`
 
 ## Decisions
 
