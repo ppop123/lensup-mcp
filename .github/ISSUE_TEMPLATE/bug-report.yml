@@ -1,0 +1,40 @@
+name: MCP compatibility or metadata issue
+description: Report a client compatibility problem, broken link, or incorrect metadata.
+title: "[Issue]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not attach identity documents, personal photos, API keys, or private files.
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - MCP client compatibility
+        - Incorrect tool metadata
+        - Broken canonical URL
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: client
+    attributes:
+      label: MCP client and version
+      placeholder: Example Client 1.2.3
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Explain what happened without including sensitive files or data.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
