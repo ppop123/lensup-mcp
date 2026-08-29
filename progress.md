@@ -15,3 +15,5 @@
 - Created the public repository at
   `https://github.com/ppop123/lensup-mcp`, configured its LensUp homepage and MCP
   topics, and pushed `main`.
+
+- 2026-08-29: README gained a product facts section (approved copy only), the llms.txt pointer, and example canonical pages; CHANGELOG 1.0.1; repo description/topics expanded. verify.sh + smoke.sh green; pushed as da62566.
