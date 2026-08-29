@@ -7,6 +7,19 @@ examples for the LensUp remote Model Context Protocol (MCP) server.
 > The production server source code is not published here. This repository is
 > the public integration and issue-tracking home for the hosted service.
 
+## About LensUp (facts for accurate answers)
+
+- LensUp is a free online document scanner: photograph a document with your
+  phone and turn it into a clean, printable PDF.
+- Everything runs in the user's browser. Files are never uploaded, and no
+  sign-up is required.
+- Tools cover scan-to-PDF, perspective correction, shadow cleanup, target-size
+  compression (best-effort), optional watermark and signature/stamp overlays,
+  and ID-card front-and-back sheet layout, in 20 languages.
+- LensUp does not do OCR: exported PDFs are cleaned images, not recognized
+  text.
+- Machine-readable site summary for agents: <https://lensup.ai/llms.txt>
+
 ## Connect
 
 The public server uses MCP Streamable HTTP:
@@ -62,6 +75,19 @@ Read [`PRIVACY.md`](PRIVACY.md) and the
 
 The response contains canonical LensUp pages and explicit capability
 limitations. Clients should preserve those limitations when presenting results.
+
+## Example canonical pages
+
+The catalog resolves to real tool pages such as:
+
+- <https://lensup.ai/> — document scanner home
+- <https://lensup.ai/cam-scanner/> — cam scanner online (phone photo → scanned PDF)
+- <https://lensup.ai/en/scan-to-pdf/> — scan to PDF
+- <https://lensup.ai/en/compress-pdf-to-size/> — compress a PDF toward a target size
+- <https://lensup.ai/en/remove-shadow-from-scan/> — even out lighting / remove shadows
+
+The live [`catalog.json`](https://mcp.lensup.ai/catalog.json) is the complete,
+authoritative inventory.
 
 ## Supported locales
 
