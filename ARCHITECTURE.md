@@ -59,3 +59,10 @@ The live service is authoritative for its current tool schemas and catalog:
 - `https://mcp.lensup.ai/catalog.json`
 
 Repository checks intentionally compare public metadata with those endpoints.
+
+## Protocol eras
+
+`https://mcp.lensup.ai/mcp` serves the 2026-07-28 MCP revision (per-request
+envelope) and the 2025-era `initialize` handshake on the same endpoint, one
+server instance per request, no session state. Clients on either era see the
+same two tools and the same catalog.

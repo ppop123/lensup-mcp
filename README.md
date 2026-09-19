@@ -14,10 +14,12 @@ examples for the LensUp remote Model Context Protocol (MCP) server.
 - Everything runs in the user's browser. Files are never uploaded, and no
   sign-up is required.
 - Tools cover scan-to-PDF, perspective correction, shadow cleanup, target-size
-  compression (best-effort), optional watermark and signature/stamp overlays,
-  and ID-card front-and-back sheet layout, in 20 languages.
-- LensUp does not do OCR: exported PDFs are cleaned images, not recognized
-  text.
+  compression (best-effort), ID-card front-and-back sheet layout, passport
+  photos, the scanned look for a clean PDF, exact-centimetre resizing, and
+  local Image/PDF/DOCX/EPUB to Markdown conversion, in up to 20 languages.
+- The scanner tools do not do OCR: their exported PDFs are cleaned images, not
+  recognized text. Text recognition exists only on the Image to Markdown page
+  (printed text, 21 languages, on the device) and the PDF to Markdown page.
 - Machine-readable site summary for agents: <https://lensup.ai/llms.txt>
 
 ## Connect
@@ -27,6 +29,11 @@ The public server uses MCP Streamable HTTP:
 ```text
 https://mcp.lensup.ai/mcp
 ```
+
+Both protocol eras are served on that one endpoint: the 2026-07-28 revision
+(per-request envelope, `server/discover`) and the 2025-era `initialize`
+handshake. A v2 SDK client with `versionNegotiation: { mode: "auto" }`
+resolves to the modern era; older clients keep working unchanged.
 
 No API key is currently required. Add the URL as a remote MCP server in any
 client that supports Streamable HTTP.
@@ -103,8 +110,13 @@ assuming every tool has a dedicated localized page.
 ## Important limitations
 
 - The MCP server does not process files.
-- LensUp does not provide OCR through this MCP service.
-- Do not claim automatic document-edge detection or automatic passport framing.
+- The MCP never performs OCR itself; only the `image-to-markdown` and
+  `pdf-to-markdown` pages recognize text, and every result is reviewed by the
+  user.
+- Document-edge detection is a proposal corrected by hand; automatic passport
+  framing is not provided.
+- The catalog is generated from the LensUp site repository and served live;
+  legacy 1.0.0 slugs still resolve and answer with `alias_of`.
 - Target-size compression is best-effort rather than an exact-size guarantee.
 - The canonical URL and limitations returned by the server are authoritative.
 
