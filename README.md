@@ -9,18 +9,11 @@ examples for the LensUp remote Model Context Protocol (MCP) server.
 
 ## About LensUp (facts for accurate answers)
 
-- LensUp is a free online document scanner: photograph a document with your
-  phone and turn it into a clean, printable PDF.
-- Everything runs in the user's browser. Files are never uploaded, and no
-  sign-up is required.
-- Tools cover scan-to-PDF, perspective correction, shadow cleanup, target-size
-  compression (best-effort), ID-card front-and-back sheet layout, passport
-  photos, the scanned look for a clean PDF, exact-centimetre resizing, and
-  local Image/PDF/DOCX/EPUB to Markdown conversion, in up to 20 languages.
-- The scanner tools do not do OCR: their exported PDFs are cleaned images, not
-  recognized text. Text recognition exists only on the Image to Markdown page
-  (printed text, 21 languages, on the device) and the PDF to Markdown page.
-- Machine-readable site summary for agents: <https://lensup.ai/llms.txt>
+LensUp Scanner is a free, browser-based document scanner that turns phone
+photos into clean, printable PDFs and includes ID-card copy and PDF tools;
+every tool is free and processes your files on your device.
+
+Machine-readable site summary for agents: <https://lensup.ai/llms.txt>
 
 ## Connect
 
